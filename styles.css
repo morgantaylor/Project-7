@@ -1,0 +1,288 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body, div, section, h1, h2, p, video, audio, button, span {
+	margin:0;
+	padding:0;	
+}
+
+body {
+	background: #ccc;	
+}
+
+button {
+    align-items: flex-start;
+    text-align: center;
+    cursor: default;
+    color: buttontext;
+    background-color: buttonface;
+    box-sizing: border-box;
+    padding: 2px 6px 3px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonface;
+    border-image: initial;
+	text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    margin: 0em 0em 0em 0em;
+}
+
+div {
+	border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+.wrapper {
+	margin:0 auto;
+	width:100%;
+	max-width:900px;
+	height:auto;	
+	background-color: #fff;
+}
+
+video {
+	max-width: 900px;
+	width:100%;
+	height:auto;	
+}
+
+#transcript {
+	margin: -40px auto 0 auto;
+  padding: 0 0 30px 0;
+  width: 100%;
+  height: auto;
+  max-width: 840px;
+  background-color: #fff;
+}
+
+#transcript p {
+	display:inline;
+	color: #666;	
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 13px;
+	line-height:1.4;
+	font-weight:400;
+}
+
+.media-container {
+	display:block;
+	height:auto;
+	width:100%;
+	position:relative;	
+}
+
+.media-container .media-controls {
+  background: transparent;
+  height: 65px;
+  position: relative;
+  top: -30px;
+  transition: top .5s ease-in-out;
+}
+
+.media-container:hover .media-controls {
+	background: transparent;
+	height: 65px;
+	position:relative;
+	top:-69px;
+}
+
+.media-container .media-button,
+.media-container .media-time {
+	position: absolute;
+	background: transparent;
+}
+
+.media-controls .media-time-rail {
+    direction: ltr;
+    width: 890px;
+    background-color: rgba(181,181,181,.3);
+    height: 2px;
+    border-radius: 5px;
+	top: 0;
+    position: relative;
+    margin: 0 5px;
+}
+.media-container .media-controls .media-playpause-button {
+	top: 29px;
+	left: 9px;
+	width: 25px;
+	height: 29px;
+	border:none;
+	background-color: transparent;
+}
+.playing {
+	width: 28px;
+	height: 33px;
+	background: url('icons/play-pause.png') no-repeat -25px 0 !important;
+	margin: 0;
+	padding: 0;
+	border:none;
+}
+.media-container .media-controls .media-playpause-button button  {
+	width: 28px !important;
+	height: 33px !important;
+	background: url('icons/play-pause.png') no-repeat 0 0;
+	margin: 0 !important;
+	padding: 0 !important;
+	border:none !important;
+}
+
+.media-container .media-controls .media-fullscreen-button  {
+	top: 34px;
+    right: 9px;
+    width: 25px;
+    height: 30px;
+    background: transparent;
+}
+.media-container .media-controls .media-fullscreen-button button {
+	width: 25px;
+    height: 30px;
+    border: none;
+    background: transparent url('icons/fullscreen-icon.png') no-repeat 0 0;
+    margin: 0;
+    padding: 0;
+}
+
+.media-container .media-controls .media-volume-button {
+	top: 30px;
+	right: 50px;
+	width: 25px;
+    height: 30px;
+    background: transparent;
+}
+.media-container .media-controls .media-mute button {
+	background: url('icons/volume-on-off.png') no-repeat 0 0;
+	width: 25px;
+	height: 30px;
+	border:none;
+	margin: 0;
+	padding: 0;
+}
+.unmute {
+	background: url('icons/volume-on-off.png') no-repeat -25px 0 !important;
+	width: 25px !important;
+	height: 30px !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.media-container .media-controls .media-currenttime-container {
+	position: absolute;
+    top: 33px;
+    left: 70px;
+	text-align: center;
+    width: 40px;
+    background: transparent;
+    padding-top: 6px;
+	color: #333;
+}
+
+.media-container .media-controls .media-duration-container {
+    position: absolute;
+    top: 33px;
+    left: 110px;
+    background: transparent;
+    padding-top: 6px;
+    color: #333;
+}
+
+.media-container .media-controls .media-duration-container .media-duration {
+    position: absolute;
+    top: 6px;
+    left: 10px;
+    width: 40px;
+    text-align: center;
+}
+
+.media-container .media-controls .media-time span {
+	color: #fff;
+}
+
+
+.media-container .media-controls .media-time button {
+	color: #333;
+}
+
+input  {
+	display: block;
+	margin: 0 auto;
+	max-width:880px;
+	width:100%;	
+	background: transparent;
+	border-radius: 15px;
+}
+
+input[type=range] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 100%; /* Specific width is required for Firefox. */
+  background: transparent; /* Otherwise white in Chrome */
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+
+  /* Hides the slider so custom styles can be added */
+  background: transparent; 
+  border-color: transparent;
+  color: transparent;
+}
+
+
+
+/*Chrome*/
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    input[type='range'] {
+      overflow: hidden;
+      width: 100%;
+      -webkit-appearance: none;
+      background-color: rgba(181,181,181,.6);
+	  border-radius: 15px;
+    }
+    
+    input[type='range']::-webkit-slider-runnable-track {
+      height: 6px;
+      -webkit-appearance: none;
+      color: #ffa500;
+      margin-top: -1px;
+    }
+    
+    input[type='range']::-webkit-slider-thumb {
+      width: 10px;
+      -webkit-appearance: none;
+      height: 10px;
+      cursor: ew-resize;
+      background: #ffa500;
+      box-shadow: -80px 0 0 80px #ffa500;
+    }
+
+}
+/** FF*/
+input[type="range"]::-moz-range-progress {
+  background-color: #ffa500; 
+}
+input[type="range"]::-moz-range-track {  
+  background-color: rgba(181,181,181,.6);
+}
+/* IE*/
+input[type="range"]::-ms-fill-lower {
+  background-color: #ffa500; 
+}
+input[type="range"]::-ms-fill-upper {  
+  background-color: rgba(181,181,181,.6);
+}
